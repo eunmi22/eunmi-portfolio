@@ -842,6 +842,26 @@ main {
   color: var(--blue);
 }
 
+.direct-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.direct-contact a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  color: var(--navy);
+  font-size: 0.96rem;
+  font-weight: 900;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+}
+
 .contact-card {
   display: grid;
   gap: 14px;
@@ -852,6 +872,43 @@ main {
   border: 1px solid var(--soft-line);
   border-radius: 8px;
   background: var(--soft);
+}
+
+.contact-info > a:not(.mail-action) {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--ink);
+  font-size: clamp(1.22rem, 2.2vw, 1.75rem);
+  font-weight: 900;
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+.contact-info p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.mail-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  margin-top: 18px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 900;
+  background: var(--blue);
+  border-radius: 6px;
+}
+
+.mail-action::after {
+  margin-left: 8px;
+  content: ">";
+  font-size: 1.2em;
+  line-height: 1;
 }
 
 .contact-card strong {
