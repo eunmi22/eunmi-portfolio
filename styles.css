@@ -227,7 +227,9 @@ main {
 
 .profile-topline {
   display: grid;
-  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) 92px;
+  gap: 18px;
+  align-items: start;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--soft-line);
 }
@@ -243,10 +245,23 @@ main {
 }
 
 .profile-topline strong {
+  display: block;
+  margin-top: 8px;
   color: var(--ink);
   font-size: 1.35rem;
   line-height: 1.35;
   word-break: keep-all;
+}
+
+.profile-thumb {
+  width: 92px;
+  height: 112px;
+  object-fit: cover;
+  object-position: 68% center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7efe6;
+  box-shadow: 0 12px 28px rgba(16, 42, 86, 0.12);
 }
 
 .metrics {
@@ -988,6 +1003,16 @@ main {
 
   .hero-main {
     min-height: 460px;
+  }
+
+  .profile-topline {
+    grid-template-columns: minmax(0, 1fr) 76px;
+    gap: 14px;
+  }
+
+  .profile-thumb {
+    width: 76px;
+    height: 92px;
   }
 
   .hero h1 {
